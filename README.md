@@ -40,9 +40,10 @@ Built for AI art-lead and orchestrator agents (and humans) starting a new projec
 3. **Avoid Hunyuan3D open weights for worldwide releases.** The license excludes the EU, UK and South Korea, including use of the outputs there.
 4. **Tripo is the most complete rigging API:** creatures as well as humanoids, and Mixamo/Unity/Unreal bone naming. Mixamo has no API and is manual only.
 5. **Unity Humanoid needs FBX.** glTFast GLB imports skip the Avatar rig setup. Godot retargets GLB directly with `SkeletonProfileHumanoid`.
-6. **For consistent multi-direction sprites, render them from 3D.** Generating frames as images drifts.
-7. **Source-image discipline matters most:** flat lighting, plain background, A-pose, fixed style and subject blocks, references for every asset in a set.
-8. **`gpt-image-1` retires 2026-10-23**, and `gpt-image-1.5`/`-mini` on 2026-12-01. Use `gpt-image-2.5-sunburst`/`-flare`.
+6. **Godot 4.7 can't import Draco- or meshopt-compressed GLBs**; Unity (glTFast) can. Ship plain GLBs to Godot and let both engines generate mesh LODs at import.
+7. **For consistent multi-direction sprites, render them from 3D.** Generating frames as images drifts.
+8. **Source-image discipline matters most:** flat lighting, plain background, A-pose, fixed style and subject blocks, references for every asset in a set.
+9. **`gpt-image-1` retires 2026-10-23**, and `gpt-image-1.5`/`-mini` on 2026-12-01. Use `gpt-image-2.5-sunburst`/`-flare`.
 
 ## Open questions / next research
 

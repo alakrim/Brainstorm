@@ -34,7 +34,7 @@
 Generate the foreground glyph and background separately (or cut the glyph out with BiRefNet). Then:
 
 ```bash
-python scripts/mobile_icons.py --foreground glyph.png --background "#1E88E5" --out build/icons
+python scripts/mobile_icons.py --foreground glyph.png --bg-color "#1E88E5" --out build/icons
 ```
 
 Framework tools that do the same: `flutter_launcher_icons` (Flutter), `@capacitor/assets` (Capacitor), icon.kitchen (web UI). Check their maintenance status before adopting.
