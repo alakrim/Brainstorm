@@ -106,11 +106,13 @@ When to do more than decimate:
 
 ```bash
 npm i -g @gltf-transform/cli
-gltf-transform resize clean/crate.glb tmp.glb --width 1024 --height 1024     # mobile: 512–1024, PC: 2048
-gltf-transform webp tmp.glb out/crate.glb                                    # or: ktx2 (needs KTX-Software)
+gltf-transform resize clean/crate.glb out/crate.glb --width 1024 --height 1024   # mobile: 512–1024, PC: 2048
+# Unity only (glTFast): optionally add `meshopt` / `draco` and `etc1s` / `uastc` (KTX2)
 ```
 
-Test compressed GLBs in the target engine before batch-processing. Engine support for Draco, meshopt and KTX2 differs; see `reference/engine-import.md`.
+- **Godot: don't use Draco or meshopt.** Godot 4.7 can't import them. Ship plain GLBs with PNG/JPEG (or WebP) textures and let Godot VRAM-compress them at import.
+- **LODs:** Godot generates mesh LODs automatically at import, and Unity 6's Mesh LOD generator can do the same (`generateMeshLods`). Only export separate LOD files when you need hand-controlled LODs.
+- Test compressed GLBs in the target engine before batch-processing. See `reference/engine-import.md`.
 
 ### 7. Engine import
 
