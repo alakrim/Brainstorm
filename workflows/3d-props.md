@@ -8,8 +8,11 @@
 |---|---|---|
 | Under ~50 props, no infrastructure | **fal `fal-ai/trellis-2`** at 1024p ($0.30/call), then headless Blender cleanup | $0.30–0.70 |
 | Low-poly / clean quad topology needed (mobile, stylized) | **Tripo H3.1** standard texture + quad (~$0.35), or **Tripo P2** (native quads, ≤25k) | $0.35–0.80 |
-| Hundreds of props | **TRELLIS.2 self-hosted** on a rented 24 GB+ GPU (RunPod L40S/4090/A100 pod, or Modal) | $0.03–0.10 + one-off setup |
+| Hundreds of props | **TRELLIS.2 self-hosted** on a rented 24 GB+ GPU (RunPod L40S/4090/A100 pod, or Modal), **after a legal sign-off** (see below) | $0.03–0.10 + one-off setup |
+| Hundreds of props, no legal sign-off | Hosted batch through fal TRELLIS.2 or Tripo; or self-hosted **Step1X-3D** (Apache-2.0; texture-stage dependencies not audited) | $0.30–0.40 / $0.05–0.15 |
 | Quick draft / blockout | fal `fal-ai/trellis` (v1, $0.02) | $0.02–0.05 |
+
+> ⚠️ **Self-hosted TRELLIS/TRELLIS.2 licensing:** the models are MIT, but the install pulls in **NVIDIA nvdiffrast**. Its license allows use only "for research or evaluation purposes … not for any direct or indirect monetary gain". Generating assets for a commercial product with a self-hosted install is legally grey, so get sign-off first. With hosted endpoints (fal), the dependency licensing is the vendor's to resolve; check the vendor's commercial-use terms instead. Details: `reference/licenses.md`.
 
 Before committing a project to one vendor, run a **5-asset bake-off** on your own art style across 2–3 options (e.g. fal TRELLIS.2, Tripo H3.1, Meshy 6). Every published comparison was written by a vendor.
 
@@ -50,7 +53,7 @@ Run BiRefNet (MIT) yourself, or use `rembg` with the `birefnet-general` or `isne
 | **Tripo H3.1** (API) | Best topology per vendor tests; delighting | 20 credits (no texture) / 30 (standard) / 40 (detailed); +5 quad; +10 smart low-poly; ≈ $0.01/credit | GLB, FBX | Smart low-poly 500–20k faces. **Tripo P2** (Sep 2026): native quads ≤25k, good for hard-surface |
 | **Meshy 6 / 7.1** (API) | Best textures per vendor tests | 30 credits textured (≈ $0.60 derived); 6-lite 15 credits; fal Meshy 6 $0.80 | GLB, FBX, OBJ, USDZ | Remesh/quad 5 credits. API needs Pro plan or above. The `lowpoly` model type retires 2026-10-30 |
 | **Hunyuan 3.1** (hosted, fal) | Highly rated for realism | $0.225 geometry → $0.525 with PBR | GLB | Hosted terms unread; see license note above |
-| **TRELLIS.2 self-hosted** | Same as fal | ~$0.01–0.03 compute (+ cold start) | GLB up to 4096² textures | MIT. 24 GB VRAM, Linux, CUDA 12.4. Exports opaque materials by default |
+| **TRELLIS.2 self-hosted** | Same as fal | ~$0.01–0.03 compute (+ cold start) | GLB up to 4096² textures | MIT, but depends on nvdiffrast (non-commercial; see warning above). 24 GB VRAM, Linux, CUDA 12.4. Exports opaque materials by default |
 | **Pixal3D** (TencentARC, MIT) | Newer, TRELLIS.2 backbone, multi-view with camera poses | Self-host | GLB PBR | Experimental; try only if you need multi-view conditioning |
 | Step1X-3D (Apache 2.0) | Decent; non-PBR texture | Self-host, 27–29 GB | GLB | License-clean fallback |
 | fal `fal-ai/trellis` (v1) | Older, lower detail | $0.02 | GLB | Blockouts, background props |

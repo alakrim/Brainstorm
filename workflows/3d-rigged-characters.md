@@ -8,7 +8,7 @@
 |---|---|---|
 | **Default (humanoids and creatures)** | **Tripo end to end**: image → 3D (H3.1 or P2, + quad) → Rigging v3.0 with the bone spec matching your engine → preset animations | $0.90–1.10 |
 | Humanoids only, best textures | **Meshy**: image-to-3D (`pose_mode: a-pose`) → auto-rig → library animations | $0.80–1.00 |
-| Many characters, low budget, someone can fix weights | TRELLIS.2 (self-host) → retopo → **UniRig / SkinTokens** (MIT) → CC0 animation library | $0.10–0.30 + human time |
+| Many characters, low budget, someone can fix weights | TRELLIS.2 (self-host, after the nvdiffrast license sign-off in `3d-props.md`; otherwise fal TRELLIS.2) → retopo → **UniRig / SkinTokens** (MIT) → CC0 animation library | $0.10–0.60 + human time |
 | Hero character | Any of the above as a base, then manual retopo/rig/weights by an artist | — |
 
 Rigging is where AI output most often needs a human. Budget review time for every character: check deformation at shoulders, hips and knees in an idle, walk, run and attack clip.

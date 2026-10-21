@@ -35,8 +35,8 @@ Built for AI art-lead and orchestrator agents (and humans) starting a new projec
 
 ## Key findings (2026-10-21)
 
-1. **Hosted per-call APIs beat GPU rental for small batches.** fal TRELLIS.2 ($0.30), Tripo (~$0.35 + $0.25 rig) and Meshy cost less than the setup time of a self-hosted model under ~50 assets. Self-host TRELLIS.2 (MIT) on a rented 24 GB+ GPU for hundreds of assets.
-2. **The best open image-to-3D model is TRELLIS.2 (MIT).** Pass it a pre-cut RGBA image so it doesn't use its default non-commercial background remover (RMBG-2.0).
+1. **Hosted per-call APIs beat GPU rental for small batches.** fal TRELLIS.2 ($0.30), Tripo (~$0.35 + $0.25 rig) and Meshy cost less than the setup time of a self-hosted model under ~50 assets. Self-hosting only pays off at hundreds of assets.
+2. **The best open image-to-3D model is TRELLIS.2 (MIT), but self-hosting it commercially needs a legal sign-off.** Its install depends on NVIDIA nvdiffrast, whose license is research/evaluation only. Its default background remover (RMBG-2.0) is also non-commercial; pass a pre-cut RGBA image. Hosted endpoints move these questions to the vendor. Step1X-3D (Apache-2.0) is the license-clean self-host fallback.
 3. **Avoid Hunyuan3D open weights for worldwide releases.** The license excludes the EU, UK and South Korea, including use of the outputs there.
 4. **Tripo is the most complete rigging API:** creatures as well as humanoids, and Mixamo/Unity/Unreal bone naming. Mixamo has no API and is manual only.
 5. **Unity Humanoid needs FBX.** glTFast GLB imports skip the Avatar rig setup. Godot retargets GLB directly with `SkeletonProfileHumanoid`.

@@ -20,7 +20,8 @@ Cost beyond image generation: ~$0.0005–0.01 per sprite.
 | Model | License for shipping | How |
 |---|---|---|
 | **BiRefNet** (general / HR / matting) | Code MIT; weights license to confirm (see `reference/licenses.md`) | Self-host (~3.5 GB VRAM) or `rembg -m birefnet-general` |
-| **rembg `isnet-general-use`** | Check `reference/licenses.md` | `pip install "rembg[cpu]"`, then `rembg p -m isnet-general-use in/ out/` (runs on CPU) |
+| **rembg `birefnet-general`** | MIT | `pip install "rembg[cpu]"`, then `rembg p -m birefnet-general in/ out/` (runs on CPU). **Always pass `-m`**: rembg's default model is the non-commercial RMBG-2.0 |
+| rembg `isnet-general-use` | Code Apache-2.0, weights unstated | Lighter/faster alternative |
 | Replicate background remover | ~$0.0005/image | Zero setup |
 | ❌ **RMBG-2.0 / rembg `bria-rmbg`** | **CC BY-NC**: needs a paid BRIA license | Don't use for shipped assets |
 
