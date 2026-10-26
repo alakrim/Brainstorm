@@ -1,0 +1,238 @@
+{
+  "generated": "2026-10-26",
+  "note": "Provenance log for research/2026-10-26. Branch refs (@main) are mutable; pin by the per-file sha256 (base64) from the jsDelivr listing. Commit SHA not available via allowed endpoints.",
+  "endpoints": [
+    "https://data.jsdelivr.com/v1/packages/gh/<owner>/<repo>@<ref>?structure=flat",
+    "https://cdn.jsdelivr.net/gh/<owner>/<repo>@<ref>/<path>"
+  ],
+  "packs": [
+    {
+      "repo": "KayKit-Game-Assets/KayKit-Character-Pack-Adventures-1.0",
+      "ref": "main",
+      "author": "Kay Lousberg (kaylousberg.com)",
+      "license": "CC0-1.0",
+      "license_file": "/addons/kaykit_character_pack_adventures/LICENSE.txt",
+      "license_sha256_b64": "rjIhQYFAVt2g3up1QNdMQdh67h2jGZd80b2E7lqSNik=",
+      "listing_url": "https://data.jsdelivr.com/v1/packages/gh/KayKit-Game-Assets/KayKit-Character-Pack-Adventures-1.0@main?structure=flat",
+      "file_count": 72,
+      "total_bytes": 18751016,
+      "glb": 5,
+      "gltf": 27,
+      "obj": 0,
+      "fbx": 0,
+      "http": {
+        "listing": 200,
+        "license": 200,
+        "readme": 200
+      }
+    },
+    {
+      "repo": "KayKit-Game-Assets/KayKit-Character-Pack-Skeletons-1.0",
+      "ref": "main",
+      "author": "Kay Lousberg (kaylousberg.com)",
+      "license": "CC0-1.0",
+      "license_file": "/addons/kaykit_character_pack_skeletons/LICENSE.txt",
+      "license_sha256_b64": "XYIqvKTgjFqR0ynlNys9xgXLqNmU91LLD339t6CnmVQ=",
+      "listing_url": "https://data.jsdelivr.com/v1/packages/gh/KayKit-Game-Assets/KayKit-Character-Pack-Skeletons-1.0@main?structure=flat",
+      "file_count": 34,
+      "total_bytes": 19633386,
+      "glb": 4,
+      "gltf": 13,
+      "obj": 0,
+      "fbx": 0,
+      "http": {
+        "listing": 200,
+        "license": 200,
+        "readme": 200
+      }
+    },
+    {
+      "repo": "KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0",
+      "ref": "main",
+      "author": "Kay Lousberg (kaylousberg.com)",
+      "license": "CC0-1.0",
+      "license_file": "/addons/kaykit_medieval_hexagon_pack/LICENSE.txt",
+      "license_sha256_b64": "iB5Q02KfupBim+3GXp5vR8+rNglZjClty39w6oMXQ2A=",
+      "listing_url": "https://data.jsdelivr.com/v1/packages/gh/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0@main?structure=flat",
+      "file_count": 996,
+      "total_bytes": 29874517,
+      "glb": 0,
+      "gltf": 221,
+      "obj": 263,
+      "fbx": 0,
+      "http": {
+        "listing": 200,
+        "license": 200,
+        "readme": 200
+      }
+    },
+    {
+      "repo": "KayKit-Game-Assets/KayKit-Dungeon-Remastered-1.0",
+      "ref": "main",
+      "author": "Kay Lousberg (kaylousberg.com)",
+      "license": "CC0-1.0",
+      "license_file": "/addons/kaykit_dungeon_remastered/Assets/LICENSE.txt",
+      "license_sha256_b64": "xfF6v2GXMfV/a7/0UPZIQhRgXBOqlrt1u8/HCTCUH/c=",
+      "listing_url": "https://data.jsdelivr.com/v1/packages/gh/KayKit-Game-Assets/KayKit-Dungeon-Remastered-1.0@main?structure=flat",
+      "file_count": 622,
+      "total_bytes": 17013515,
+      "glb": 203,
+      "gltf": 0,
+      "obj": 208,
+      "fbx": 0,
+      "http": {
+        "listing": 200,
+        "license": 200,
+        "readme": 200
+      }
+    },
+    {
+      "repo": "KayKit-Game-Assets/KayKit-Prototype-Bits-1.0",
+      "ref": "main",
+      "author": "Kay Lousberg (kaylousberg.com)",
+      "license": "CC0-1.0",
+      "license_file": "/addons/kaykit_prototype_bits/Assets/LICENSE.txt",
+      "license_sha256_b64": "FwbTNp7NdnYyDAPCWomMwp/Ru4O9MTZkbEXm9AAFiIc=",
+      "listing_url": "https://data.jsdelivr.com/v1/packages/gh/KayKit-Game-Assets/KayKit-Prototype-Bits-1.0@main?structure=flat",
+      "file_count": 302,
+      "total_bytes": 2322447,
+      "glb": 0,
+      "gltf": 72,
+      "obj": 77,
+      "fbx": 0,
+      "http": {
+        "listing": 200,
+        "license": 200,
+        "readme": 200
+      }
+    },
+    {
+      "repo": "KayKit-Game-Assets/KayKit-Halloween-Bits-1.0",
+      "ref": "main",
+      "author": "Kay Lousberg (kaylousberg.com)",
+      "license": "CC0-1.0",
+      "license_file": "/addons/kaykit_halloween_bits/Assets/LICENSE.txt",
+      "license_sha256_b64": "pRTEHY1fKgfJTFWs0pupT1C4aDf5cuN+20y963ug4OA=",
+      "listing_url": "https://data.jsdelivr.com/v1/packages/gh/KayKit-Game-Assets/KayKit-Halloween-Bits-1.0@main?structure=flat",
+      "file_count": 270,
+      "total_bytes": 3269808,
+      "glb": 0,
+      "gltf": 63,
+      "obj": 70,
+      "fbx": 0,
+      "http": {
+        "listing": 200,
+        "license": 200,
+        "readme": 200
+      }
+    },
+    {
+      "repo": "KayKit-Game-Assets/KayKit-Furniture-Bits-1.0",
+      "ref": "main",
+      "author": "Kay Lousberg (kaylousberg.com)",
+      "license": "CC0-1.0",
+      "license_file": "/addons/kaykit_furniture_bits/Assets/LICENSE.txt",
+      "license_sha256_b64": "zWdfKtwx61/trtwQctjdwnuRf1I2gvBWGDfAPcVjk8s=",
+      "listing_url": "https://data.jsdelivr.com/v1/packages/gh/KayKit-Game-Assets/KayKit-Furniture-Bits-1.0@main?structure=flat",
+      "file_count": 216,
+      "total_bytes": 2082671,
+      "glb": 0,
+      "gltf": 53,
+      "obj": 53,
+      "fbx": 0,
+      "http": {
+        "listing": 200,
+        "license": 200,
+        "readme": 200
+      }
+    },
+    {
+      "repo": "KayKit-Game-Assets/KayKit-City-Builder-Bits-1.0",
+      "ref": "main",
+      "author": "Kay Lousberg (kaylousberg.com)",
+      "license": "CC0-1.0",
+      "license_file": "/addons/kaykit_city_builder_bits/Assets/LICENSE.txt",
+      "license_sha256_b64": "sHbYa+7GYOFVDgB5bKJKi3DXshh9eZVLLilyK2ZtzpM=",
+      "listing_url": "https://data.jsdelivr.com/v1/packages/gh/KayKit-Game-Assets/KayKit-City-Builder-Bits-1.0@main?structure=flat",
+      "file_count": 208,
+      "total_bytes": 3889530,
+      "glb": 0,
+      "gltf": 41,
+      "obj": 61,
+      "fbx": 0,
+      "http": {
+        "listing": 200,
+        "license": 200,
+        "readme": 200
+      }
+    },
+    {
+      "repo": "KayKit-Game-Assets/KayKit-Space-Base-Bits-1.0",
+      "ref": "main",
+      "author": "Kay Lousberg (kaylousberg.com)",
+      "license": "CC0-1.0",
+      "license_file": "/addons/kaykit_space_base_bits/Assets/LICENSE.txt",
+      "license_sha256_b64": "4ccy7cBUvMI/zuJAkwTwP+DxXJ5RUL/WpyoPCdUT6T8=",
+      "listing_url": "https://data.jsdelivr.com/v1/packages/gh/KayKit-Game-Assets/KayKit-Space-Base-Bits-1.0@main?structure=flat",
+      "file_count": 264,
+      "total_bytes": 4013568,
+      "glb": 0,
+      "gltf": 57,
+      "obj": 73,
+      "fbx": 0,
+      "http": {
+        "listing": 200,
+        "license": 200,
+        "readme": 200
+      }
+    },
+    {
+      "repo": "KayKit-Game-Assets/KayKit-Restaurant-Bits-1.0",
+      "ref": "main",
+      "author": "Kay Lousberg (kaylousberg.com)",
+      "license": "CC0-1.0",
+      "license_file": "/addons/kaykit_restaurant_bits/Assets/LICENSE.txt",
+      "license_sha256_b64": "TaStOj+s5opxwRyK3I6TAX/euP1n/LDKgoa9nD279nQ=",
+      "listing_url": "https://data.jsdelivr.com/v1/packages/gh/KayKit-Game-Assets/KayKit-Restaurant-Bits-1.0@main?structure=flat",
+      "file_count": 592,
+      "total_bytes": 9375391,
+      "glb": 0,
+      "gltf": 144,
+      "obj": 150,
+      "fbx": 0,
+      "http": {
+        "listing": 200,
+        "license": 200,
+        "readme": 200
+      }
+    }
+  ],
+  "downloads": [
+    {
+      "url": "https://cdn.jsdelivr.net/gh/KayKit-Game-Assets/KayKit-Character-Pack-Adventures-1.0@main/addons/kaykit_character_pack_adventures/Characters/gltf/Knight.glb",
+      "bytes": 3659532,
+      "sha256_b64_listing": "YEKOOrwJuoPlldJW46+MXJdrRs2uWZ8IAvyCtKNEUWg=",
+      "sha256_match": true,
+      "scratch_only": true
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/gh/KayKit-Game-Assets/KayKit-Character-Pack-Skeletons-1.0@main/addons/kaykit_character_pack_skeletons/Characters/gltf/Skeleton_Warrior.glb",
+      "bytes": 4863620,
+      "sha256_b64_listing": "F4tv2oELgUwlDYogEMJN/ZtFi5AG3TIzU+Ygt/8Ri74=",
+      "sha256_match": true,
+      "scratch_only": true
+    }
+  ],
+  "measurements": [
+    {
+      "date": "2026-10-26",
+      "project": "Bannerfall (reported); re-run in asset-pipeline sandbox",
+      "tool": "@gltf-transform/cli 4.5.1 (npm)",
+      "input": "Knight.glb (KayKit Adventures)",
+      "input_bytes": 3659532,
+      "command": "gltf-transform optimize in.glb out.glb --compress meshopt --texture-compress false --simplify false --join false --flatten false --instance false",
+      "output_bytes": 2028872,
+      "reproduced": true
+    }
+  ]
+}

@@ -13,6 +13,7 @@ Built for AI art-lead and orchestrator agents (and humans) starting a new projec
 | Any asset: good source images | [`workflows/00-source-images.md`](workflows/00-source-images.md) | Muse for volume, Sunburst for masters/edits/transparency | $0.01–0.20 |
 | **3D props / environment pieces** | [`workflows/3d-props.md`](workflows/3d-props.md) | BiRefNet cutout → fal TRELLIS.2 or Tripo → Blender cleanup → gltf-transform | $0.30–0.70 (bulk self-hosted: $0.03–0.10) |
 | **3D rigged + animated characters** | [`workflows/3d-rigged-characters.md`](workflows/3d-rigged-characters.md) | A-pose turnaround → Tripo 3D + Rig v3.0 + presets (Meshy for humanoids) | $0.90–1.10 |
+| **Ready-made CC0 3D (characters, props, buildings)** | [`reference/free-3d-asset-sources.md`](reference/free-3d-asset-sources.md) | Verified KayKit / CC0 packs (jsDelivr) → hash-check → `check_glb.py` → gltf-transform | ~$0 |
 | **2.5D: 2D sprites lit by dynamic lights** | [`workflows/2.5d.md#a`](workflows/2.5d.md#a-lit-sprites-normal-maps-for-2d-lighting) | Cutout → Laigter / Depth Anything 3 → normal map | ~$0 |
 | **2.5D: 8-direction / isometric sprites** | [`workflows/2.5d.md#b`](workflows/2.5d.md#b-pre-rendered-3d--2d-sprites-dead-cells--isometric-rpg-style) | Image → rigged 3D → headless Blender ortho renders → sprite sheets | $0.30–1.10 per character |
 | **2.5D: isometric tiles** | [`workflows/2.5d.md#c`](workflows/2.5d.md#c-isometric-tiles-and-props) | Reference-locked generation + snapping, or 3D → render | $0–0.40 |
@@ -30,6 +31,7 @@ Built for AI art-lead and orchestrator agents (and humans) starting a new projec
 | [`reference/licenses.md`](reference/licenses.md) | Which models/tools are safe for commercial shipping, and red flags |
 | [`reference/compute-and-pricing.md`](reference/compute-and-pricing.md) | Hosted APIs vs GPU rental, prices, billing gotchas, agent setup |
 | [`reference/engine-import.md`](reference/engine-import.md) | Godot 4 / Unity 6 import settings, retargeting, headless automation |
+| [`reference/free-3d-asset-sources.md`](reference/free-3d-asset-sources.md) | Verified CC0 / permissive 3D packs (KayKit via jsDelivr): licenses, formats, rigging, fetch script |
 | [`scripts/`](scripts/README.md) | Tested CPU helper scripts: GLB check/cleanup/LODs, sprite rendering, normal maps, pixel snap, mobile icons |
 | [`research/`](research/) | Raw dated research reports with full source lists |
 
