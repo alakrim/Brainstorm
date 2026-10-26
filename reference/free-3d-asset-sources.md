@@ -108,3 +108,52 @@ Then log each file to the asset manifest (URL, bytes, SHA-256, license, date), a
 | Date | Project | Asset | Input | Result | Tool |
 |---|---|---|---|---|---|
 | 2026-10-26 | Bannerfall (reported) and asset-pipeline sandbox (re-run) | KayKit Adventures `Knight.glb` | 3,659,532 B, 76 clips | 2,028,872 B with meshopt (no texture or simplify changes) | `@gltf-transform/cli` 4.5.1 |
+
+## Shared-list vetting (2026-10-26): Quaternius, Kenney, Poly Haven, ambientCG, game-icons.net, Sonniss
+
+*Checked 2026-10-26 from the sandbox. Raw log with every URL, status and quoted line: [`research/2026-10-26/asset-list-vetting.md`](../research/2026-10-26/asset-list-vetting.md). This section resolves the "unverified" rows for Quaternius and Kenney above. Not legal advice.*
+
+| Source | What is verified | License (as quoted) | Attribution | Format | Fit for Bannerfall |
+|---|---|---|---|---|---|
+| **Quaternius** (site-wide) | Site license page is **QAL v1.0** (updated 8/28/2026). Pack pages carry their own license line | Site: "You can use these assets, free of charge, in personal, educational, and commercial games... with no credit required. You just can't resell or redistribute the assets themselves." Pack pages: **CC0** (RPG Characters, Ultimate Monsters, Cute Monsters, Knight Character, Ultimate Modular Characters). **QAL** on Bestiary Dungeon Monsters Kit | Not required | 3D low-poly; pages list FBX (RPG Characters also OBJ, Blend, glTF) | **Good** (characters, monsters). FBX needs converting to GLB for three.js. Read each pack page before download |
+| **Kenney** (3D kits) | Each asset page: "License Creative Commons CC0". Support FAQ: attribution not required | CC0 | Not required | 3D kits: Nature Kit, Fantasy Town Kit 2.0, Mini Dungeon, Blocky Characters, Mini Characters (zip sizes in raw log). Model format not inspected | **Good** for props and dressing (Fantasy Town, Nature, Mini Dungeon). **Partial** for characters (blocky style, unverified visually) |
+| **Kenney** (2D: Tiny Town, RPG Base, Roguelike/RPG, 1-Bit, UI Pack) | Category 2D on each asset page | CC0 | Not required | 2D sprites, 16 px tiles | **Poor** for the 3D look. **Partial** for UI Pack (flat HUD art) |
+| **Kenney** (audio: Interface Sounds, Music Jingles) | Category Audio; CC0 | CC0 | Not required | Audio | **Good** for UI sounds and stingers |
+| **Poly Haven** (textures) | API lists 869 textures. Site license page | "CC0 means absolute freedom." and "You do not need to give credit or attribution" | Not required | PBR maps (diffuse, normal, roughness, AO, arm); 1k JPG verified | **Good** for ground. Use the diffuse only and restyle |
+| **ambientCG** (materials) | FAQ: "All assets are released under the Creative Commons CC0 license" | CC0 | Not required | PBR photo scans; 1K-JPG zips verified | **Good** for ground. Photoreal; needs desaturation for a stylized look |
+| **game-icons.net** | `license.txt` in `game-icons/icons`: "Icons provided under the Creative Commons 3.0 BY or CC0 if mentioned below" | **CC BY 3.0 by default; some contributors CC0** | **Required for CC BY**: "Icons made by {author}" | SVG, 4,229 files, 37 contributors | **Good** for icons, item and status symbols. 2D flat, not 3D |
+| **Sonniss GDC bundle** | Via WebFetch (paraphrased summary of "Version 2.0, effective 27 August 2026"). Curl returns 403 | Commercial use allowed; no attribution; **no redistribution as sound effects** ("Licensee may not distribute, publish, sub-license or otherwise supply the sound effects as sound effects") | Not required | Audio | **Good** for SFX. Bundle size and contents **(unverified)** |
+| **Poly Pizza** | **(unverified)**: 403 to curl and WebFetch. Secondary (WebSearch): credit pages list models as CC-BY 3.0 "via Poly Pizza" | Per model; read each model page | Required for CC-BY | 3D low-poly | **Partial**, per model only |
+
+### Corrections to the rows above
+
+- **Quaternius** is no longer "unverified in this sandbox". The site license is QAL, not plain CC0. Pack pages say CC0 for most packs, so check the page for each pack. Quaternius packs are not reachable programmatically (no direct file URLs were found; downloads go through the pack page, Patreon or itch). Mirror not found at the paths checked.
+- **Kenney** asset zips are reachable with a plain HEAD request, for example `https://kenney.nl/media/pages/assets/nature-kit/37ac38a37b-1677698939/kenney_nature-kit.zip` (10.5 MB, 200). Kenney is CC0 per site, not on GitHub.
+
+### Fetch recipes (verified 2026-10-26)
+
+```text
+Poly Haven 1k diffuse (JPG):
+  https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/<id>/<id>_diff_1k.jpg
+  ids: grass_path_2 (716 KB), dirt_floor (903 KB), cobblestone_floor_08 (586 KB)
+  per-asset map list: https://api.polyhaven.com/files/<id>
+
+ambientCG (1K JPG zip; API must be the main host, not api.ambientcg.com):
+  https://ambientcg.com/get?file=<AssetId>_1K-JPG.zip        e.g. Grass005, PavingStones141, Ground110
+  listing: https://ambientcg.com/api/v2/full_json?type=Material&q=<term>&limit=40&include=downloadData
+
+game-icons.net (CC BY 3.0 by default, per-contributor check):
+  listing: https://data.jsdelivr.com/v1/packages/gh/game-icons/icons@master?structure=flat
+  file:    https://cdn.jsdelivr.net/gh/game-icons/icons@master/<contributor>/<icon>.svg
+
+Kenney (CC0; HEAD first, then download):
+  https://kenney.nl/media/pages/assets/<slug>/<hash>/<zipname>.zip   (URL is on the asset page, scraped from the download button)
+```
+
+### Ideas to borrow from RPGAtlas (GPLv3 code, not to be copied)
+
+[RPGAtlas](https://github.com/DriftwoodGaming/RPGAtlas) is GPLv3 or later. Bannerfall is MIT, so its code must not be copied in. Ideas only; reimplement from the concept.
+
+- Per-map opt-in HD-2D post stack: bloom, depth of field, distance fog, point lights placed from map events (`light #rrggbb radius`).
+- Procedural SFX and generative music in the browser (RPGAtlas `js/sfx.js`), an alternative or companion to Sonniss.
+- Multiplayer safety defaults: no accounts, room codes, free-text chat off by default, mute and report, owner kick and ban. Players connect to a server, never directly to each other.
